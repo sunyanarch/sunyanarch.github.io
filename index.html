@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>The student daily activity trace</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css">
+   
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <div id="console">
+      <h1>The Student Daily Activity Trace</h1>
+      <p>
+        Data:
+        <a
+          href="javascript:;"
+          >the student daily activity trace of the Journalism & Communication at School at Xianlin Campus, Nanjing University</a
+        >
+        
+      </p>
+      <div class="session">
+        <h2>Number</h2>
+        <div class="row colors"></div>
+        <div class="row labels">
+          <div class="label">5</div>
+          <div class="label">10</div>
+          <div class="label">20</div>
+          <div class="label">40</div>
+          <div class="label">60</div>
+          <div class="label">75+</div>
+        </div>
+      </div>
+      <div class="session">
+        <h2>Time: <label id="active-hour">12PM</label></h2>
+        <input
+          id="slider"
+          class="row"
+          type="range"
+          min="0"
+          max="23"
+          step="1"
+          value="12"
+        />
+      </div>
+     
+    </div>
+    <script  type='text/javascript' src="map.js">
+      
+    </script>
+  </body>
+</html>
