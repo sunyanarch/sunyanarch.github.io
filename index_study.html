@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESIGN TAKE CARE OF THE WORLD</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./fa/css/all.css">
+    <link rel="icon" href="./favicon.ico">
+
+    <style>
+        .clearfix::before,
+        .clearfix::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-bar {
+            width: 100%;
+            height: 40px;
+            position: absolute;
+            top: 0;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            background-color: rgba(200, 200, 200, 0.7);
+
+        }
+
+        .top-bar a {
+            margin-left: 3%;
+            line-height: 2.5em;
+            text-decoration: none;
+            color: #777777;
+            float: left;
+        }
+
+        .top-bar .title {
+            margin-left: 16%;
+            line-height: 2.5em;
+            color: #777777;
+            font-weight: bolder;
+            font-size: 1.0em;
+            font-family: georgia, 'times new roman', times, serif;
+
+        }
+
+        /*图标*/
+
+        .category .category-list {
+            display: none;
+            width: 80px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgb(204, 204, 204);
+            font-size: 12px;
+            /* 设置绝对定位，使其不占据页面的位置 */
+            position: absolute;
+            top: 40px;
+            margin-left: 5px;
+            z-index: 999;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, .2)
+        }
+
+        .category:hover .category-list {
+            display: block;
+        }
+
+        .category-list {
+            padding: 0 10px;
+            border: 1px solid transparent;
+            border-bottom: none;
+            position: relative;
+            z-index: 9999;
+        }
+
+        .category-list a:hover,
+        .category-list a.highlight {
+            color: black;
+            font-weight: bolder;
+        }
+
+        /*结束*/
+
+        .first-line {
+            margin-top: 80px;
+            margin-left: 1%;
+            width: 80%;
+
+        }
+
+        .preface {
+            width: 80%;
+            margin-top: 10px;
+            margin-left: 1%;
+            text-align: justify;
+        }
+
+        .item {
+            margin-top: 4%;
+            margin-left: 1%;
+            margin-bottom: 20px;
+            width: 80%;
+            border-bottom: 1px rgb(180, 180, 180) solid;
+
+        }
+
+
+        .box-wrapper {
+            width: 55%;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: 15%;
+            /*background-color: burlywood;*/
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-between;
+            align-items: stretch;
+        }
+
+        .box {
+            width: 210px;
+            height: 300px;
+            margin-bottom: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+            transition: all .3s;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .box:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+        }
+
+        .box p {
+            margin-top: 20px;
+            padding-left: 2px;
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+
+        #special {
+            margin: 0;
+            position: absolute;
+        }
+
+
+
+        img {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .mid {
+            width: 40%;
+            float: left;
+
+        }
+
+
+
+        h3 {
+            margin-bottom: 10px;
+            padding-left: 8%;
+            font-size: 24px;
+            line-height: 1.2em;
+            font-weight: bold;
+
+        }
+
+        p {
+            margin-bottom: 36px;
+            padding-left: 20%;
+            padding-right: 5%;
+            font-size: 14px;
+            line-height: 24px;
+
+        }
+
+        li {
+            padding-left: 20%;
+            padding-right: 35%;
+            font-size: 14px;
+            line-height: 24px;
+
+        }
+
+        strong {
+            font-weight: bolder;
+        }
+
+        .front {
+            padding-left: 7%;
+            font-size: 16px;
+            float: left;
+        }
+
+        p.chinese {
+            font-size: 12px;
+        }
+
+
+
+        footer {
+            width: 80%;
+            margin-bottom: 1%;
+            padding-left: 2%;
+            border-top: 1px rgb(180, 180, 180) solid;
+
+        }
+
+        footer .footer-wrapper {
+            margin-top: 1%;
+        }
+
+        footer span {
+            margin-right: 5px;
+            font-size: 12px;
+            color: rgb(133, 133, 133);
+            text-align: left;
+        }
+
+        footer a {
+            margin-left: 5px;
+            color: #777777;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            font-family: Arial Unicode MS, sans-serif;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="category">
+            <div class="current">
+                <a href="javascript:;"><i class="fas fa-align-justify"></i></a>
+            </div>
+            <div class="category-list">
+                <a href="./index_map.html">MAP</a>
+                <a href="./index_projects.html">PROJECT</a>
+                <a href="./index_study.html">STUDY</a>
+                <a href="./index_cv.html">ABOUT</a>
+            </div>
+        </div>
+        <div class="email">
+            <a href="mailto:sunyanarch@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="title">
+            <a href="./index_cv.html">DESIGN TAKE CARE OF THE WORLD</a></div>
+    </div>
+    </div>
+
+
+    <div class="first-line">
+        <h3>STUDY</h3>
+    </div>
+    <div class="preface">
+        <p><strong>Architecture design</strong> as care work, is more important than genius ideas or unique shapes.
+            Design should take care of nature and people, which means we need to design from mitigation, adaptation, low
+            carbon, more health, and more resilience. All these begin with studying, learning, and experiencing from
+            every field, every technology, cooperate with all kinds of situated knowledge.</p>
+        <p><strong>Key Words:</strong> Mapping, Writing, Coding, Educating </p>
+    </div>
+
+    <div class="item"> </div>
+
+    <ul class="box-wrapper">
+        <div class="box">
+            <a href="https://designcat2020.github.io/Complex-and-Conflic/">
+                <img src="./image/S/01.jpg">
+                <p>Complex And Conflict: Presidential Election Observe From New York Data</p>
+            </a>
+        </div>
+        <div class="box">
+            <a href="http://designcat2020.github.io/High-Line-Park-Architecture-Guide/">
+                <p id="special">High Line Park Architecture Guide</p>
+                <img src="./image/S/02.jpg">
+            </a>
+        </div>
+        <div class="box">
+            <a href="http://designcat2020.github.io/The-student-daily-activity-trace/">
+                <img src="./image/S/03.gif">
+                <p></br>The Student Daily Activity Trace</br>Data from the Journalism & Communication School, Nanjing
+                    University</p>
+            </a>
+        </div>
+
+        <div class="box">
+            <a href="./data/Introduction.pdf">
+                <img src="./image/S/04.jpg">
+                <p>Discussion of Chinese Collective Housing Design from Gender Perspective</p>
+            </a>
+        </div>
+        <div class="box">
+            <a
+                href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2021&filename=FDCS202107021&uniplatform=NZKPT&v=Tiq0G3zH57DZyTcBNkreDhjY7JZ1gtywKbqAEDecrGFD%25mmd2BNArCabiY%25mmd2BduTsJjTe7C">
+                <img src="./image/S/05.gif">
+                <p class="chinese">《城市化进程中的建筑设计实践与思考》</p>
+            </a>
+        </div>
+
+        <div class="box">
+        <a
+            href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2021&filename=JUSH202115008&uniplatform=NZKPT&v=pv1R4giwQg%25mmd2B%25mmd2Bbo%25mmd2FPx8Rj9RsQ6F9Hv%25mmd2FBnVvALBzkr3lXGj4mwNN0kKde2%25mmd2B1zpWi0b">
+                <img src="./image/S/06.gif">
+                <p class="chinese"></br>《从舒适到幸福——浅谈可持续发展的人居环境设计》</p>
+        </a>
+    </div>
+
+
+
+
+    </ul>
+
+    <footer>
+        <div class="footer-wrapper">
+            <span>© 2021 Yan Sun. All rights reserved.</span>
+            <a href="mailto:sunyanarch@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/sunyanarch"><i class="fab fa-github"></i></a>
+            <a href="#top"><i class="fas fa-home"></i></a>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
