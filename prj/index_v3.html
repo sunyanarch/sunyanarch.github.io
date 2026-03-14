@@ -489,23 +489,51 @@
         }
 
         @media (max-width: 640px) {
-            .header {
-                padding: 18px 16px;
-            }
+    .results-table {
+        min-width: 760px;
+    }
 
-            .header h1 {
-                font-size: 1.45rem;
-            }
+    .results-table th,
+    .results-table td {
+        padding: 10px 10px;
+        font-size: 0.86rem;
+    }
 
-            .query-section,
-            .results-section {
-                padding: 14px;
-            }
+    .results-table th:nth-child(1),
+    .results-table td:nth-child(1) {
+        width: 52px;
+        min-width: 52px;
+    }
 
-            .btn-group {
-                grid-template-columns: 1fr;
-            }
-        }
+    .results-table th:nth-child(2),
+    .results-table td:nth-child(2) {
+        width: 150px;
+        min-width: 150px;
+    }
+
+    .results-table th:nth-child(3),
+    .results-table td:nth-child(3) {
+        width: 120px;
+        min-width: 120px;
+    }
+
+    .results-table th:nth-child(4),
+    .results-table td:nth-child(4) {
+        width: 72px;
+        min-width: 72px;
+    }
+
+    .results-table th:nth-child(5),
+    .results-table td:nth-child(5) {
+        width: 290px;
+        min-width: 290px;
+    }
+
+    .content-cell {
+        line-height: 1.6;
+        word-break: break-word;
+    }
+}
     </style>
 </head>
 
