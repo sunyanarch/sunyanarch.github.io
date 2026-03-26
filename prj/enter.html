@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>进入验证</title>
+  <script>
+    sessionStorage.removeItem("page_auth_ok");
+    sessionStorage.removeItem("page_auth_expire");
+    window.location.replace("./login_gate.html");
+  </script>
+</head>
+<body>
+  正在跳转...
+</body>
+</html>
