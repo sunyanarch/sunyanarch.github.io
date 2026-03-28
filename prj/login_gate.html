@@ -113,12 +113,12 @@
 </head>
 <body>
   <div class="card">
-    <h1>请输入访问密码</h1>
-        <label for="pwd">访问密码</label>
-    <input type="password" id="pwd" placeholder="请输入密码" autocomplete="off" />
+    <h1>Please enter your password</h1>
+        <label for="pwd">Password</label>
+    <input type="password" id="pwd" placeholder="Please enter your password" autocomplete="off" />
 
     <div class="actions">
-      <button type="button" id="loginBtn">进入页面</button>
+      <button type="button" id="loginBtn">Login</button>
     </div>
 
     <div class="msg" id="msg"></div>
@@ -141,7 +141,7 @@
         sessionStorage.setItem("page_auth_expire", String(expireAt));
         window.location.href = TARGET_PAGE;
       } else {
-        msg.textContent = "密码错误，请重试。";
+        msg.textContent = "Please try again!";
       }
     }
 
